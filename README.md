@@ -13,4 +13,4 @@ Requirements - python3, selenium module, web driver
     forget to write your browser name at the end of path.
     
     
-NOTE: < Run this scrip on Time Because The Program Does Not Kepp real time track record of classes but will be added in future>
+NOTE: < Run this scrip on time because this program does not keep real time track record of classes but will be added in future>
