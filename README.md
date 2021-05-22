@@ -11,3 +11,6 @@ Requirements - python3, selenium module, web driver
 
 4. Change your browser path in the source file. Right click on shortcut of your browser and click open file location. Then from properties copy the complete path. Do not 
     forget to write your browser name at the end of path.
+    
+    
+NOTE: < Run this scrip on Time Because The Program Does Not Kepp real time track record of classes but will be added in future>
