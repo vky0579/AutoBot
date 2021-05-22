@@ -1,4 +1,5 @@
 from selenium import webdriver
+from time import sleep
 
 class Main():
     def __init__(self, path = None, driver = None, option = None, browser = None):
@@ -48,9 +49,9 @@ class Main():
                 print("No alert to accept")
             finally:
                 pass
+            sleep(3600)
 
-        #   Possibility is that i need to fill the checkbox or javascript prompt saying yes
-    
+         
 
 
 
