@@ -62,8 +62,8 @@ class Main():
 
 if __name__ =="__main__":
     script = Main()
-    uName = input("Enter your username : ")
-    passd = input("Enter your password : ")
+    uName = data["username"]
+    passd = data["password"]
        
     print("Skip if no")
     inc =bool(input("Do you want inconito window [y] : "))
