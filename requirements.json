@@ -1,4 +1,6 @@
 {
     "browser_path" : "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
-    "driver_path" : "chromedriver.exe"
+    "driver_path" : "chromedriver.exe",
+    "username" : "",
+    "password" : ""
 }
