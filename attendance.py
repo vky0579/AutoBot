@@ -1,10 +1,15 @@
 from selenium import webdriver
 from time import sleep
+import json
 
+
+with open("requirements.json", "r") as f:
+    data = json.load(f)
+ 
 class Main():
     def __init__(self, path = None, driver = None, option = None, browser = None):
-        self.path = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
-        self.driver = "chromedriver.exe"
+        self.path = data["browser_path"]
+        self.driver = data["driver_path"]
         self.option = webdriver.ChromeOptions()
         self.option.binary_location = self.path
         self.option.add_experimental_option("detach", True) #This will detach browser from script and do not close it
