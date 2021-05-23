@@ -1,4 +1,4 @@
-# Andromeda
+# AutoBot
 Requirements - python3, selenium module, web driver
 
 1. For selenium module
