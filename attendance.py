@@ -1,8 +1,14 @@
 from selenium import webdriver
-from time import sleep
+import time
 import json
+import argparse
 
 
+class Add():
+    def __init__(self):
+        pass
+
+        
 with open("requirements.json", "r") as f:
     data = json.load(f)
  
@@ -44,6 +50,15 @@ class Main():
 
         browser.get("https://eck12student.jupsoft.com/StudentPanel/Erp_eLearningRoom.aspx")
 
+        #Working on update
+        """
+        ls = []
+        for i in range(0, 3):
+            text = browser.find_element_by_id(f"ContentPlaceHolder1_RepDetails_lblTime_{i}")
+            ls.append(text.text)
+        print(ls)             
+        """
+
         while True:
             element = browser.find_element_by_class_name("start-btn")
             element.click() 
@@ -54,20 +69,27 @@ class Main():
                 print("No alert to accept")
             finally:
                 pass
-            sleep(3600)
-
-         
+            time.sleep(3600)        
 
 
 
 if __name__ =="__main__":
     script = Main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--incognito", "-i", help = "It will open browser in incognito mode", action = "store_true")
+    parser.add_argument("--headless", "-he", help = "It will start browser in background", action = "store_true")
+    args = parser.parse_args()
+
     uName = data["username"]
     passd = data["password"]
-       
-    print("Skip if no")
-    inc =bool(input("Do you want inconito window [y] : "))
-    hd = bool(input("Do you want headless window [y] : "))
+
+    inc = False
+    hd = False
+
+    if args.incognito:
+        inc = True
+    if args.headless:
+        hd = True    
 
     script.options(inc, hd)
     script.navigate(uName, passd)
