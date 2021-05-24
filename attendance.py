@@ -1,5 +1,5 @@
 from selenium import webdriver
-from time import sleep
+import time
 import json
 
 
@@ -44,9 +44,16 @@ class Main():
 
         browser.get("https://eck12student.jupsoft.com/StudentPanel/Erp_eLearningRoom.aspx")
 
+        ls = []
+        for i in range(0, 3):
+            text = browser.find_element_by_id(f"ContentPlaceHolder1_RepDetails_lblTime_{i}")
+            ls.append(text)
+
+        
+
         while True:
             element = browser.find_element_by_class_name("start-btn")
-            element.click() 
+            # element.click() 
             try:
                 alert = browser.switch_to_alert()
                 alert.accept()
@@ -54,7 +61,7 @@ class Main():
                 print("No alert to accept")
             finally:
                 pass
-            sleep(3600)
+            time.sleep(3600)
 
          
 
