@@ -47,7 +47,8 @@ class Main():
         ls = []
         for i in range(0, 3):
             text = browser.find_element_by_id(f"ContentPlaceHolder1_RepDetails_lblTime_{i}")
-            ls.append(text)
+            ls.append(text.text)
+        print(ls)
 
         
 
