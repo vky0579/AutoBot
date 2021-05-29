@@ -9,8 +9,7 @@ Requirements - python3, selenium module, web driver
 
 3. Change the location of web driver in requirements.json
 
-4. Change your browser path in the source file. Right click on shortcut of your browser and click open file location. Then from properties copy the complete path. Do not 
-    forget to write your browser name at the end of path.
+4. Change your browser path in the requirements.json file. Right click on shortcut of your browser and click open file  location. Then from properties copy the complete path. Do not forget to write your browser name at the end of path.
     
     
-NOTE: < Run this scrip on time because this program does not keep real time track record of classes but will be added in future>
+NOTE: Run this scrip on time because this program does not keep real time track record of classes but will be    added  in future
